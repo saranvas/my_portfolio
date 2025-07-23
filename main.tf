@@ -2,7 +2,7 @@
 variable "bucket_name" {
   description = "The name for the S3 bucket"
   type        = string
-  default     = "saranvas-portfolio-site-23072025" # Make sure this is your unique name
+  default     = "saranvas-portfolio-site-0723-v2" # Make sure this is your unique name
 }
 
 # Configure the AWS provider
