@@ -58,3 +58,9 @@ resource "aws_s3_bucket_policy" "allow_public_access" {
 output "website_endpoint" {
   value = "http://${aws_s3_bucket_website_configuration.portfolio_website.website_endpoint}"
 }
+
+# Add this new block
+output "bucket_name" {
+  description = "The name of the S3 bucket."
+  value       = aws_s3_bucket.portfolio_bucket.id
+}
