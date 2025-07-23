@@ -37,9 +37,9 @@ resource "aws_s3_bucket_website_configuration" "portfolio_website" {
 
 # Resource 4: Create a policy to make the bucket contents public
 resource "aws_s3_bucket_policy" "allow_public_access" {
-  bucket = aws_s_bucket.portfolio_bucket.id
+  bucket = aws_s3_bucket.portfolio_bucket.id
   # (NEW!) This line ensures the public access block is configured before the policy is applied.
-  depends_on = [aws_s_bucket_public_access_block.portfolio_bucket_public_access]
+  depends_on = [aws_s3_bucket_public_access_block.portfolio_bucket_public_access]
 
   policy = jsonencode({
     Version = "2012-10-17",
